@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HR Salary Prediction</title>
+	<style>
+		body {
+			font-family: "Roboto", sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		form {
+			background: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 400px;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: bold;
+		}
+
+		input[type="number"],
+		input[type="submit"] {
+			width: calc(100% - 22px);
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		input[type="submit"] {
+			background-color: #e5533c;
+			color: white;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #cc4934;
+		}
+
+		.footer {
+			background-color: #000;
+			color: white;
+			padding: 10px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>HR SALARY PREDICTION</h1>
+	<form action="/predict" method="POST">
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" required>
+
+		<label for="experience">Years of Experience:</label>
+		<input type="number" id="experience" name="experience" required>
+
+		<input type="submit" value="Predict Salary">
+	</form>
+
+	<!-- Footer -->
+	<div class="footer">
+		<p>&copy; 2024 HR Salary Prediction. All rights reserved.</p>
+	</div>
+</body>
+
+</html>
